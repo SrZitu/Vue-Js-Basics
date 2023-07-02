@@ -8,12 +8,22 @@
 </head>
 <body>
     <!-- v-cloak , jokon data fully load hobe tokhn  e sudhu seta k show korbe.ugly obostay na -->
+    <!--  v-cloak Used to hide un-compiled template until it is ready. -->
     <div id="app1" class="app" v-cloak>
 
         <!-- string template  to add two or more properties side by side -->
         <!-- methods are used to shorten the template look -->
         
         <h2>My name is :  {{fullName() }}</h2>
+
+        <hr>
+
+        <!-- v-model="" we can easily bind data using vmodel -->
+        <label for="firstName">First Name</label>
+        <input type="text"  v-model="firstName" autofocus><br>
+          <label for="lastName">Last Name</label>
+        <input type="text"  v-model="lastName" >
+        
     </div>
      <!-- <div id="app2" class="app">
         <h2> My name is : {{firstName}} {{lastName}}</h2>
