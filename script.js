@@ -3,7 +3,12 @@ const vm=Vue.createApp({
 data() {
     return {
         firstName:'Sazzadur',
-        lastName:"Rahman"
+        lastName:"Rahman",
+        link:'https://www.w3schools.com/html/html_attributes.asp',
+        isButtonDisabled: false,
+        inputPlaceholder: 'Enter your text',
+        maxInputLength: 10,
+        inputValue: ''
     }
 },
 // we used method because all the logic should be in js

@@ -1,4 +1,5 @@
-//  Vue.js directives. Directives are special attributes that you can use in your Vue templates to apply behavior to the DOM elements. Vue.js provides several built-in directives that you can use out of the box, and you can also create custom directives.
+//  Vue.js directives. Directives are special attributes that you can use in your Vue templates to apply behavior to the DOM elements. 
+//Vue.js provides several built-in directives that you can use out of the box, and you can also create custom directives.
 
 // Here are some of the most commonly used Vue.js directives:
 

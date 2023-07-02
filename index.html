@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Vue </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Vue</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- v-cloak , jokon data fully load hobe tokhn  e sudhu seta k show korbe.ugly obostay na -->
     <!--  v-cloak Used to hide un-compiled template until it is ready. -->
     <div id="app1" class="app" v-cloak>
+      <!-- string template  to add two or more properties side by side -->
+      <!-- methods are used to shorten the template look -->
 
-        <!-- string template  to add two or more properties side by side -->
-        <!-- methods are used to shorten the template look -->
-        
-        <h2>My name is :  {{fullName() }}</h2>
+      <h2>My name is : {{fullName() }}</h2>
 
-        <hr>
+      <hr />
+  
+      <!-- v-model="" we can easily bind data using vmodel -->
+      <label for="firstName">First Name</label>
+      <input type="text" v-model="firstName" autofocus /><br />
+      <label for="lastName">Last Name</label>
+      <input type="text" v-model="lastName" />
 
-        <!-- v-model="" we can easily bind data using vmodel -->
-        <label for="firstName">First Name</label>
-        <input type="text"  v-model="firstName" autofocus><br>
-          <label for="lastName">Last Name</label>
-        <input type="text"  v-model="lastName" >
-        
+      <br />
+
+      <!-- v-bind is a directive used to bind data or expressions to an HTML attribute. -->
+      <h1>Binding Attributes</h1>
+      <div class="binding_attribute">
+       
+        <p>
+          <a :href="link" target="_blank" style="text-decoration: none"
+            >W3 Schools</a
+          >
+        </p>
+        <br />
+
+        <h2>Welcome, {{ fullName() }}</h2>
+        <button :disabled="isButtonDisabled">Submit</button>
+        <input
+          :placeholder="inputPlaceholder"
+          :maxlength="maxInputLength"
+          v-model="inputValue"
+        />
+        <p>Character count: {{ inputValue.length }}</p>
+      </div>
     </div>
-     <!-- <div id="app2" class="app">
+    <!-- <div id="app2" class="app">
         <h2> My name is : {{firstName}} {{lastName}}</h2>
     </div>
   -->
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
