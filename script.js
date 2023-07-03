@@ -9,7 +9,8 @@ data() {
         inputPlaceholder: 'Enter your text',
         maxInputLength: 10,
         inputValue: '',
-        raw_url:' <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style="text-decoration: none">w3schools</a>'
+        raw_url:' <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style="text-decoration: none">w3schools</a>',
+        age:20
     }
 },
 // we used method because all the logic should be in js
@@ -18,6 +19,15 @@ data() {
 methods: {
     fullName(){
         return  `${this.firstName.toUpperCase()} ${this.lastName.toUpperCase()}` 
+    },
+    increment(){
+    return this.age++;
+    },
+    decrement(){
+    return this.age--;
+    },
+    updateLastName(event){
+    return this.lastName=event.target.value;
     }
   
 },

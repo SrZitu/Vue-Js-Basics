@@ -16,48 +16,67 @@
     <!-- v-cloak , jokon data fully load hobe tokhn  e sudhu seta k show korbe.ugly obostay na -->
     <!--  v-cloak Used to hide un-compiled template until it is ready. -->
     <div id="app1" class="app" v-cloak>
+      <div class="container mt-5">
+        
+ 
       <!-- string template  to add two or more properties side by side -->
       <!-- methods are used to shorten the template look -->
+      <div class="row">
+        <div class="col-12 ">
+          
+          <h2>My name is : {{fullName() }}</h2>
 
-      <h2>My name is : {{fullName() }}</h2>
+          <!-- v-model="" we can easily bind data using vmodel -->
+          <!-- this is used for two way data binding -->
+          <label for="firstName">First Name</label>
+          <input type="text" v-model="firstName" autofocus />  <br>
+          <label for="lastName">Last Name</label>
+          <input type="text" v-model="lastName" />
+        </div>
+ 
+        <div class="col-12 ">
+          <!-- v-bind is a directive used to   bind data or expressions to an HTML attribute. -->
+          <h2>Binding Attributes</h2>
+          <div class="binding_attribute">
+            <p>
+              <a :href="link" target="_blank" style="text-decoration: none"
+                >W3 Schools</a
+              >
+            </p>
 
-      <hr />
+            <h2>Welcome, {{ fullName() }}</h2>
+            <button :disabled="isButtonDisabled">Submit</button>
+            <input
+              :placeholder="inputPlaceholder"
+              :maxlength="maxInputLength"
+              v-model="inputValue"
+            />
+            <p>Character count: {{ inputValue.length }}</p>
+          </div>
+        </div>
+        <div class="col-12 ">
+          <div class="outputing_raw_html">
+            <h4>Outputing Raw Html Using v-html</h4>
+            <p v-html="raw_url"></p>
+          </div>
+        </div>
 
-      <!-- v-model="" we can easily bind data using vmodel -->
-      <!-- this is used for two way data binding -->
-      <label for="firstName">First Name</label>
-      <input type="text" v-model="firstName" autofocus /><br />
-      <label for="lastName">Last Name</label>
-      <input type="text" v-model="lastName" />
+        <div class="col-12 ">
+          <div class="listing-event">
+            <h4>listing To events</h4>
+            <label for="firstName">First Name</label>
+            <input type="text" v-model="firstName" autofocus /><br />
+            <label for="lastName">Last Name</label>
+            <input type="text" :value="lastName" @input="updateLastName" /><br />
+           <p>{{age}}</p>
+            <button class="btn btn-primary m-2" @click="increment"> Increment</button>
+            <button class="btn btn-primary" @click="decrement"> Decrement</button>
+          </div>
 
-      <br />
-      <hr />
-      <!-- v-bind is a directive used to   bind data or expressions to an HTML attribute. -->
-      <h1>Binding Attributes</h1>
-      <div class="binding_attribute">
-        <p>
-          <a :href="link" target="_blank" style="text-decoration: none"
-            >W3 Schools</a
-          >
-        </p>
-        <br />
-
-        <h2>Welcome, {{ fullName() }}</h2>
-        <button :disabled="isButtonDisabled">Submit</button>
-        <input
-          :placeholder="inputPlaceholder"
-          :maxlength="maxInputLength"
-          v-model="inputValue"
-        />
-        <p>Character count: {{ inputValue.length }}</p>
-      </div>
-      <hr />
-      <div class="outputing_raw_html">
-        <h4 class="text-success">Outputing Raw Html Using v-html</h4>
-        <p v-html="raw_url"></p>
+        </div>
       </div>
     </div>
-
+  </div>
     <!-- <div id="app2" class="app">
         <h2> My name is : {{firstName}} {{lastName}}</h2>
     </div>
