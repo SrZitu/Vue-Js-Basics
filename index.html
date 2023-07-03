@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First Vue</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!-- v-cloak , jokon data fully load hobe tokhn  e sudhu seta k show korbe.ugly obostay na -->
@@ -16,19 +22,19 @@
       <h2>My name is : {{fullName() }}</h2>
 
       <hr />
-  
+
       <!-- v-model="" we can easily bind data using vmodel -->
+      <!-- this is used for two way data binding -->
       <label for="firstName">First Name</label>
       <input type="text" v-model="firstName" autofocus /><br />
       <label for="lastName">Last Name</label>
       <input type="text" v-model="lastName" />
 
       <br />
-
-      <!-- v-bind is a directive used to bind data or expressions to an HTML attribute. -->
+      <hr />
+      <!-- v-bind is a directive used to   bind data or expressions to an HTML attribute. -->
       <h1>Binding Attributes</h1>
       <div class="binding_attribute">
-       
         <p>
           <a :href="link" target="_blank" style="text-decoration: none"
             >W3 Schools</a
@@ -45,7 +51,13 @@
         />
         <p>Character count: {{ inputValue.length }}</p>
       </div>
+      <hr />
+      <div class="outputing_raw_html">
+        <h4 class="text-success">Outputing Raw Html Using v-html</h4>
+        <p v-html="raw_url"></p>
+      </div>
     </div>
+
     <!-- <div id="app2" class="app">
         <h2> My name is : {{firstName}} {{lastName}}</h2>
     </div>

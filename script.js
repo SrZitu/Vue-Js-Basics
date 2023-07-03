@@ -8,7 +8,8 @@ data() {
         isButtonDisabled: false,
         inputPlaceholder: 'Enter your text',
         maxInputLength: 10,
-        inputValue: ''
+        inputValue: '',
+        raw_url:' <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style="text-decoration: none">w3schools</a>'
     }
 },
 // we used method because all the logic should be in js
