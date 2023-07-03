@@ -10,7 +10,8 @@ data() {
         maxInputLength: 10,
         inputValue: '',
         raw_url:' <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style="text-decoration: none">w3schools</a>',
-        age:20
+        age:20,
+        nickName:'zitu'
     }
 },
 // we used method because all the logic should be in js
@@ -28,6 +29,11 @@ methods: {
     },
     updateLastName(event){
     return this.lastName=event.target.value;
+    } ,
+    updateNickName(msg,event){
+        event.preventDefault();
+        console.log(msg);
+    return this.nickName=event.target.value;
     }
   
 },
