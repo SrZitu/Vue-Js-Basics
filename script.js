@@ -31,7 +31,7 @@ methods: {
     return this.lastName=event.target.value;
     } ,
     updateNickName(msg,event){
-        event.preventDefault();
+     
         console.log(msg);
     return this.nickName=event.target.value;
     }

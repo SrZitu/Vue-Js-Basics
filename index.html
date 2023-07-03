@@ -69,7 +69,7 @@
             <label for="lastName">Last Name</label>
             <input type="text" :value="lastName" @input="updateLastName" /><br />
               <label for="NickName">Nick Name</label>
-            <input type="text" :value="nickName" @input="updateNickName('Nick name event is triggered',$event)" /><br />
+            <input type="text" :value="nickName" @input.prevent="updateNickName('Nick name event is triggered',$event)" /><br />
             
            <p>{{age}}</p>
             <button class="btn btn-primary m-2" @click="increment"> Increment</button>
