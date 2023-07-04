@@ -70,7 +70,8 @@
             <input type="text" :value="lastName" @input="updateLastName" /><br />
               <label for="NickName">Nick Name</label>
             <input type="text" :value="nickName" @input.prevent="updateNickName('Nick name event is triggered',$event)" /><br />
-            
+            <label for="lastName">Hobby</label>
+            <input type="text"  @keyup.enter="updateHobby" /><br />
            <p>{{age}}</p>
             <button class="btn btn-primary m-2" @click="increment"> Increment</button>
             <button class="btn btn-primary" @click="decrement"> Decrement</button>

@@ -11,7 +11,8 @@ data() {
         inputValue: '',
         raw_url:' <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style="text-decoration: none">w3schools</a>',
         age:20,
-        nickName:'zitu'
+        nickName:'zitu',
+        hobby:''
     }
 },
 // we used method because all the logic should be in js
@@ -19,7 +20,7 @@ data() {
 //remember in arrow function $this will not work
 methods: {
     fullName(){
-        return  `${this.firstName.toUpperCase()} ${this.lastName.toUpperCase()}` 
+        return  `${this.firstName.toUpperCase()} ${this.lastName.toUpperCase()}! your hobby is ${this.hobby}` 
     },
     increment(){
     return this.age++;
@@ -34,6 +35,10 @@ methods: {
      
         console.log(msg);
     return this.nickName=event.target.value;
+    },
+    updateHobby(event){
+     
+    return this.hobby=event.target.value;
     }
   
 },
